@@ -7,28 +7,34 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link HomeFragment.OnFragmentInteractionListener} interface
+ * {@link AnswerNoFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link HomeFragment#newInstance} factory method to
+ * Use the {@link AnswerNoFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
-
+public class AnswerNoFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
 
-    public HomeFragment() {
+    public AnswerNoFragment() {
         // Required empty public constructor
     }
 
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment AnswerNoFragment.
+     */
     // TODO: Rename and change types and number of parameters
-    public static HomeFragment newInstance() {
-        HomeFragment fragment = new HomeFragment();
+    public static AnswerNoFragment newInstance() {
+        AnswerNoFragment fragment = new AnswerNoFragment();
         return fragment;
     }
 
@@ -41,41 +47,14 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-
-
-        View v = inflater.inflate(R.layout.fragment_home, container, false);
-
-        ImageView ivyes = v.findViewById(R.id.answerYesButton);
-        ivyes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Fragment fr=AnswerYesFragment.newInstance();
-                FragmentChangeListener fc=(FragmentChangeListener)getActivity();
-                fc.replaceFragment(fr);
-            }
-        });
-
-        ImageView ivno = v.findViewById(R.id.answerNoButton);
-        ivno.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Fragment fr=AnswerNoFragment.newInstance();
-                FragmentChangeListener fc=(FragmentChangeListener)getActivity();
-                fc.replaceFragment(fr);
-            }
-        });
-
-        return v;
-
+        return inflater.inflate(R.layout.fragment_answer_no, container, false);
     }
 
-    public void myMethod(View v) {
-
-    }
-
-    public void onButtonPressedNo(View v) {
-
+    // TODO: Rename method, update argument and hook method into UI event
+    public void onButtonPressed(Uri uri) {
+        if (mListener != null) {
+            mListener.onFragmentInteraction(uri);
+        }
     }
 
     @Override
@@ -87,9 +66,6 @@ public class HomeFragment extends Fragment {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
         }
-
-
-
     }
 
     @Override

@@ -13,4 +13,7 @@
     <string name="hello_blank_fragment_calendar">Hello Calendar fragment</string>
     <string name="hello_blank_fragment_account">Hello Account fragment</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
