@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Lovechain3</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_account">Account</string>
+    <string name="title_calendar">Calendar</string>
+    <string name="title_stories">Success Stories</string>
+
+
+    <string name="hello_blank_fragment_home">Hello Home fragment</string>
+    <string name="hello_blank_fragment_stories">Hello Stories fragment</string>
+    <string name="hello_blank_fragment_calendar">Hello Calendar fragment</string>
+    <string name="hello_blank_fragment_account">Hello Account fragment</string>
+
+</resources>
